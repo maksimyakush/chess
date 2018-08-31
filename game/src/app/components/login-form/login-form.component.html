@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <form #signupForm="ngForm">
+    <mat-form-field>
+      <input type="email" name="email" matInput placeholder="Email" required [(ngModel)]="email">
+    </mat-form-field>
+    <mat-form-field>
+      <input type="password" name="password" matInput placeholder="Password" [(ngModel)]="password" required>
+    </mat-form-field>
+    <div *ngIf ="errorMessage">
+      <mat-toolbar>{{errorMessage}}</mat-toolbar>
+    </div>
+    <button type="submit" mat-button color="accent" [disabled]="!signupForm.form.valid" (click)="login()">Login</button>
+  </form>
+</div>

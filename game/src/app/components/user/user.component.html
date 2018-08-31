@@ -1,0 +1,26 @@
+<div class="wrapper" *ngIf="AuthService?.currentId !== user.key; else currentUserInfo">
+  <a [routerLink]="['/profiles',user.key, user.displayName]">
+    <div class="userName">{{user?.displayName}}</div>
+    <mat-chip-list>
+      <mat-chip color="info" selected="true">{{user.rating}}</mat-chip>
+    </mat-chip-list>
+  </a>
+  <span *ngIf="!AuthService?.currentId;else  info"> Register for playing</span>
+  <ng-template #info>
+    <button mat-raised-button mat-small color="warn" (click)="invite()" *ngIf="!user?.status; else status">Invite</button>
+    <ng-template #status>{{user?.status}}</ng-template>
+  </ng-template>
+</div>
+<ng-template #currentUserInfo>
+  <div class="wrapper currentUserInfo">
+    <a [routerLink]="['/profiles',user.key, user.displayName]">
+      <div class="userName">{{user?.displayName}} </div>
+      <mat-chip-list>
+        <mat-chip color="info" selected="true">{{user.rating}}</mat-chip>
+      </mat-chip-list>
+    </a>
+    <div class="hero">Hero
+      <i class="fa fa-user-o" aria-hidden="true"></i>
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,19 @@
+.wrapper {
+    display: grid;
+    padding: 1em;
+    height: calc(100vh-100px);
+    grid-gap: 2em;
+    justify-content: center;
+    padding-left: 150px;
+}
+
+
+h1 {
+    text-align: center;
+    width: 500px;
+    color: #333;
+}
+a {
+    display: grid;
+    width: 500px;
+}

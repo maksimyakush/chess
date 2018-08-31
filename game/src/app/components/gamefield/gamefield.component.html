@@ -1,0 +1,37 @@
+<div class="wrapper">
+  <particles [params]="particlesParams" [style]="particlesStyle" [width]="width" [height]="height"></particles>
+  <div class="board-wrapper">
+    <div id="board" style="width: 500px"></div>
+  </div>
+  <aside>
+    <div class="info" *ngIf="!gameData?.gameOver; else info">
+      <div class="first-player-info">
+        <div class="player-name">{{secondPlayerData?.displayName }}</div>
+        <mat-chip color="info">{{secondPlayerData?.rating}}</mat-chip>
+        <div class="timer">{{secondPlayerTime | toMinutes}} </div>
+      </div>
+      <div class="second-player-info">
+        <div class="player-name">{{firstPlayerData?.displayName }}</div>
+        <mat-chip color="info">{{firstPlayerData?.rating}}</mat-chip>
+        <div class="timer">{{firstPlayerTime | toMinutes}}</div>   
+      </div>
+      <div id="score"></div>
+    </div>
+    <div class="buttons-wrapper">
+      <button class="resign" mat-raised-button color="warn" (click)="resign()">Resign</button>
+      <button class="rematch" mat-raised-button color="primary" disabled>Rematch</button>
+      <button mat-raised-button color="info" (click)="exit()">Exit</button>
+    </div>
+    <ng-template #info>
+      <div class="current-info" *ngIf="gameData?.opponentLeft">
+        <mat-toolbar>{{gameData?.opponentLeft}}</mat-toolbar>
+      </div>
+      <div class="current-info" *ngIf = "gameData?.resignedPlayer">
+        <mat-toolbar>{{gameData?.resignedPlayer}}</mat-toolbar>
+      </div>
+      <div class="current-info" *ngIf="gameData?.winnerPlayer && !gameData?.resignedPlayer">
+        <mat-toolbar>{{gameData?.winnerPlayer}}</mat-toolbar>
+      </div>
+    </ng-template>
+  </aside>
+</div>

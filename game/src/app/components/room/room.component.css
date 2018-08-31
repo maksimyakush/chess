@@ -1,0 +1,21 @@
+.wrapper {
+  background-image: url("../../../assets/gamefield/img/background/stars-bg.png");
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: calc(100vh - 100px); 
+}
+
+particles {
+    position: fixed;
+}
+
+.register-phrase {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+
+

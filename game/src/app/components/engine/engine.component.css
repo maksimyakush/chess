@@ -1,0 +1,18 @@
+.wrapper {
+    display: grid;
+    height: calc(100vh - 100px);
+}
+.choose-engine {
+  align-self: center;
+  justify-self: center;
+  font-size: 160px;
+}
+
+.fa-laptop {
+  color: #fff;
+  cursor: pointer;
+}
+
+.fa-laptop:hover {
+  opacity: 0.7;
+}

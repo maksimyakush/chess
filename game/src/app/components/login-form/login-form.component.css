@@ -1,0 +1,16 @@
+form {
+    display: grid;
+    padding: 1em;
+    width: 700px;
+    height: 300px;
+}
+
+button {
+    padding: .5em;
+    font-size: 30px;
+    align-self: center;
+}
+
+mat-toolbar {
+    font-size: 1em;
+}

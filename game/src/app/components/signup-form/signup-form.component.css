@@ -1,0 +1,22 @@
+.wrapper {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+form {
+    display: grid;
+    padding: 1em;
+    width: 600px;
+    height: 400px;
+}
+
+button {
+    padding: .5em;
+    font-size: 30px;
+    align-self: center;  
+}
+
+mat-toolbar {
+    font-size: 1em;
+}

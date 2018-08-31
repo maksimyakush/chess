@@ -1,0 +1,10 @@
+<app-navbar></app-navbar>
+<div class="wrapper">
+          <particles [params]="particlesParams" [style]="particlesStyle" [width]="width" [height]="height"></particles>
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>{{user?.displayName}}</mat-card-title>
+      <mat-card-subtitle>{{user?.email}}</mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+</div>

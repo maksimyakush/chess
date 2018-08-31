@@ -1,0 +1,84 @@
+.wrapper {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, minmax(250px, auto));
+    height: 100vh;
+    grid-gap: 3em;
+    font-size: 2em;
+    background-image: url("../../../assets/gamefield/img/background/stars-bg.png");
+    background-size: cover;
+    position: relative;
+}
+
+particles {
+    position: fixed;
+}
+
+aside {
+    display: grid;
+    grid-gap: 1em;
+    align-self: center; 
+}
+
+mat-chip {
+    padding: 0.5em;
+}
+
+.player-name {
+    font-weight: bold;
+    color: #fff;
+}
+
+.timer {
+    color: lightcyan;
+}
+
+.first-player-info, .second-player-info {
+    display: grid;
+    grid-gap: 1em;
+    text-align: center;
+    justify-items: center;
+  
+}
+
+.info {
+    padding: 1em;
+    border: 1px solid pink;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-gap: 3em;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+.buttons-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+
+#score {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} 
+
+.current-info {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+@media screen and (max-width: 880px) {
+    aside {
+        display: none;
+    }
+}
+

@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <particles [params]="particlesParams" [style]="particlesStyle" [width]="width" [height]="height"></particles>
+  <div id="board" style="width: 600px"></div>
+  <aside>
+    <div class="buttons-wrapper">
+      <button mat-raised-button color="info" (click)="exit()">Exit</button>
+    </div>
+    <div class="current-info" *ngIf="winner">
+      <mat-toolbar>{{winner}}</mat-toolbar>
+    </div>
+  </aside>
+</div>

@@ -1,0 +1,41 @@
+.wrapper {
+  height: calc(100vh - 100px);
+}
+
+mat-sidenav-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+}
+.fa-users {
+  font-size: 160px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.fa-users:hover {
+  opacity: 0.7;
+}
+
+mat-sidenav {
+  width: 100%;
+  background: rgb(57, 74, 80)
+}
+
+mat-sidenav-content {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.end {
+  text-align: end;
+}
+
+.fa-times{
+  color: #fff;
+  font-size: 32px;
+}

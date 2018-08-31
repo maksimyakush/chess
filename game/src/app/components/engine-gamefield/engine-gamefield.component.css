@@ -1,0 +1,33 @@
+.wrapper {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, minmax(50px, auto));
+    height: 100vh;
+    grid-gap: 1em;
+    background-image: url("../../../assets/gamefield/img/background/stars-bg.png");
+    background-size: cover;
+    position: relative;
+}
+
+particles {
+    position: fixed;
+}
+
+aside {
+    display: grid;
+    grid-gap: 1em;
+    align-self: center;   
+}
+
+.buttons-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+
+.current-info {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}

@@ -1,0 +1,15 @@
+.wrapper {
+    display: grid;
+    height: calc(100vh - 60px);
+    align-items: center;
+    justify-items: center;
+    background-image: url("../../../assets/gamefield/img/background/stars-bg.png");
+}
+
+particles {
+    position: fixed;
+}
+
+.card {
+    width: 300px;
+}

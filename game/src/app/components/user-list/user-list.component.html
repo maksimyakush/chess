@@ -1,0 +1,23 @@
+<div class="wrapper"> 
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav [mode]="">
+      <p class="end">
+        <button   mat-button (click)="sidenav.toggle()">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+      </p>
+      <p>
+        <mat-list>
+          <mat-list-item *ngFor="let user of users | async">
+            <app-user *ngIf="currentUserId != user.key" [user]=user></app-user>
+          </mat-list-item>    
+        </mat-list>
+      </p>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <p class="sidenav-toggle">
+          <i class="fa fa-users" aria-hidden="true" (click)="sidenav.toggle()"></i>
+      </p>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

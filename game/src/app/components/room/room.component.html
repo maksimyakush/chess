@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+<div class="wrapper">
+        <particles [params]="particlesParams" [style]="particlesStyle" [width]="width" [height]="height"></particles>
+    <app-user-list></app-user-list>
+    <app-game-setter *ngIf="AuthService.currentId; else info"></app-game-setter>
+    <ng-template #info>
+        <div class="register-phrase">
+            <h2>
+                <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+                Register to play against people or <br>prove your skills by playing against engine! 
+                <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+            </h2>  
+        </div>    
+    </ng-template>         
+    <app-engine></app-engine>
+</div>

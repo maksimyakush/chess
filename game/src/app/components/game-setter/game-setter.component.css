@@ -1,0 +1,14 @@
+.wrapper {
+    display: grid;
+    height: calc(100vh - 100px);
+    color: #fff;
+}
+mat-radio-group {
+  align-self: center;
+  justify-self: center;
+}
+
+mat-radio-button {
+  padding-right: 0.5em;
+}
+
